@@ -1,5 +1,5 @@
 # strings.h
->**Almost complete rewrite of standard C library string.h**
+**Almost complete rewrite of standard C library string.h**
 ### Functions comparison
 
 | Functions from my library | Functions from standard library |
