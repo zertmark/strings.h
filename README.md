@@ -1,7 +1,7 @@
 # strings.h
-Almost complete rewrite of standard C library string.h
+>**Almost complete rewrite of standard C library string.h**
+### Functions comparison
 
-## Functions comparison
 | Functions from my library | Functions from standard library |
 | ------ | ------ | 
 | int memory_compare (void *, void *, size_t ) | [```int memcmp ( const void * , const void * , size_t )```](https://m.cplusplus.com/reference/cstring/memcmp/) |
@@ -22,8 +22,16 @@ Almost complete rewrite of standard C library string.h
 | char *concatn (char *, const char *, size_t ) | [```char * strncat ( char *, const char *, size_t )```](https://m.cplusplus.com/reference/cstring/strncat/) |
 | size_t string_span_c (const char *, const char * ) | [```size_t strcspn ( const char * , const char *  )```](https://m.cplusplus.com/reference/cstring/strcspn/) |
 | size_t string_len (const char * ) | [```size_t strlen ( const char * ) ```](https://m.cplusplus.com/reference/cstring/strlen/) |
-| int max (const int , const int ) |  |
-| int min (const int , const int )  |  |
+| int max (const int , const int ) | |
+| int min (const int , const int )  | |
 | char *create_string_in_heap (char * ) | |
 | size_t is_sub_string_in (const char *, const char * ) | |
-| size_t is_char_in_string (const char *, int  ) |  |
+| size_t is_char_in_string (const char *, int  ) | |
+
+### Functions that haven't been written yet:
+| Function name | Full function name |
+| ------ | ------ |
+| strcoll | [```int strcoll ( const char * , const char *  )```](https://m.cplusplus.com/reference/cstring/strcoll/) |
+| strxfrm | [```size_t strxfrm ( char * , const char * , size_t  )```](https://m.cplusplus.com/reference/cstring/strxfrm/) |
+| strtok | [```char * strtok ( char * , const char *  )```](https://m.cplusplus.com/reference/cstring/strtok/) |
+| strerror | [```char * strerror ( int )```](https://m.cplusplus.com/reference/cstring/strerror/) |
