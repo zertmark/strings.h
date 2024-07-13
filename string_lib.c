@@ -372,3 +372,35 @@ char *locate_any_characters_in_string (const char * string_one, const char * str
     }
     return NULL;
 }
+char* strip_string(char* string)
+{
+    size_t offset = 0;
+    size_t len = string_len(string);
+    char* output = NULL;
+    if (string == NULL || !len || (string[0]!='\n' && string[len-1]!='\n'))
+    {
+        return string;
+    }
+    output = calloc(len-(1+(string[0]=='\n' && string[len-1] == '\n')),
+                                                         sizeof(char));
+    offset = (string[0]=='\n') + 2*(string[len-1] == '\n');
+    switch (offset)
+    {
+        case 1:
+            string++;
+            len--;
+            break;
+        case 2:
+            len--;
+            break;
+        case 3:
+            string++;
+            len-=2;
+            break;
+        default:
+            break;
+    }
+    string_ncopy(output, string, len);
+    output[len] = 0;
+    return output;
+}
