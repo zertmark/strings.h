@@ -23,4 +23,4 @@ int string_comparen(const char *string_one, const char *string_two, size_t num);
 size_t string_span (const char *string_one, const char *string_two );
 size_t string_span_c (const char *string_one, const char *string_two);
 char *locate_any_characters_in_string (const char * string_one, const char * string_two );
-
+char* strip_string(char* string);
